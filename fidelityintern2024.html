@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Fidelity Intern Experience - Vikranth</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>Portfolio</strong> <span>by Vikranth Chinnam</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+					<nav id="menu">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="workexperience.html">Work Experience</a></li>
+							<li><a href="skills&foundation.html">Skills & Foundations</a></li>
+							<li><a href="extracurriculars.html">Extracurriculars</a></li>
+							<li><a href="academics.html">Academics</a></li>
+						</ul>
+						<!-- <ul class="actions stacked">
+							<li><a href="#" class="button primary fit">Get Started</a></li>
+							<li><a href="#" class="button fit">Log In</a></li>
+						</ul> -->
+					</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Software Engineer Intern - Fidelity Investments</h1>
+									</header>
+									<span class="image main"><img src="images/fidelityBanner.jpeg" alt="" /></span>
+									<p>During my summer at Fidelity I mainly worked on two things Automated Testing, and designing and developing a migration for The Techworksx Desktop Assistant App to a cross-platform web app</p>
+									<p>Created Plaform End to End Automated functional tests, and Behavioral Unit Tests for a new Angular web app using Cypress with CICD integration, supporting speed and quality.</p>
+									<p>The Techworks Desktop Assistant App was a desktop app that was used to assist Fidelity Associates with common Tech Support Issues so as to reduce the workload of the tech support team. This app would open up other applications configure their settings, run scripts on the user's machine to fix their problems, and deal with password issues.</p> 
+									
+									<p>The problem was that many times Fidelity Associates would directly go to the tech support and would lose hours for problems that could be fixed by the Techworks Desktop Assistant App</p>
+									<p>To fix this problem, the Techworks team wanted to integrate the techworks desktop app into the tech support web app so people could try to fix their problems before queuing up for tech support. The main problem was that the web app would need to access to the user's machine which was not easily possible as the web app was interacting with the OS through the browser making it problematic to run scripts and interact with other applications</p>
+									<p>To fix this issue I came up with 2 solutions including opening a WMI/SSH remote connection to the user's computer to run scripts, and the other solution was to use Custom HTTP Protocol to open up an exe file which would run scripts based on the URL Parameters</p>
+									<p>While developing the proof of concept I've come accoss a problem users couldn't connect to the techsupport web app if they had vpn connectivity issues as it was an internal website. One workaround I proposed was to convert the web app to a Progressive Web App which would make it so that it is accessible even when they had not VPN connection as the website would be cached.</p>
+								</div>
+							</section>
+
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<!-- <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+								<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+								<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li> -->
+								<li><a target="_blank" rel="noopener" href="https://github.com/vikranthchinnam" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+								<li><a target="_blank" rel="noopener" href="https://www.linkedin.com/in/vikranth-chinnam-553a21256" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>&copy; Vikranth Chinnam</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
