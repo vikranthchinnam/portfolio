@@ -29,14 +29,16 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="workexperience.html">Work Experience</a></li>
+							<li><a href="skills.html">Skills</a></li>
+							<li><a href="extracurriculars.html">Extracurriculars</a></li>
+							<li><a href="academics.html">Academics</a></li>
 						</ul>
-						<ul class="actions stacked">
+						<!-- <ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Get Started</a></li>
 							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
+						</ul> -->
 					</nav>
 
 				<!-- Main -->
@@ -46,12 +48,18 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Generic</h1>
+										<h1>UTD Tool Crib</h1>
 									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+									<span class="image main"><img src="images/toolCrib.ico" alt="" /></span>
+									<p>This project had the most real world impact out of all of my projects and had the potential to save $30,000+ every year.</p>
+									<p><b>Context:</b> UTD has a Capstone Project for every undergrad student before being able to graduate, and for engineering majors like Mechanical Engineering, and Electrical Engineering they needed tools like Hammers, Glue guns, Screwdrivers. The UTD Fabrication Shop had a tool house where they had 1000+ tools that they would loan out to students to assist with their project.</p>
+									<p>Problems: They were doing this on paper which lead to a lot of paperwork, and also they had to manage hundreds of teams borrowing tools and could not keep track of which tools were being returned on time and which tools were getting lost. Most students back then would borrow a tool and keep it for a whole semester and return it at the end, increasing costs as they had to keep enough tools to lend tools to all the teams.</p>
+									<p><b>UI/UX Solution:</b> When I came on the project all they had were the problems and we were tasked with coming up with a viable solution to the problems. the Manager of the Tool Crib suggested a solution where they labeled every tool with a barcode and then scanned it along with their comet card to check out the tool in their name. As I was thinking about more viable solutions, I thought about a problem, It would be a huge logistics issue to put barcodes on 1000+ tools and then maintain those barcodes as barcodes would keep falling off and tearing up. I suggested instead of using barcodes that we just added records that had the tool name they checked out, along with team name, and Comet ID. The Fabrication Shop manager was satisfied with that solution and asked us to give a demo of the UI/UX so he could better understand the solution and see if there needs to be any changes. So we came with the <a href="https://www.figma.com/design/V1ViCM0f98Q8TRZmEXQfXZ/Tool-Crib-Design?node-id=0-1&t=Xvwg0mQ8tG3tHkTs-1" target="_blank">Figma design</a></p>
+									<p><b>Technical Solution V1.0:</b>After the Fabrication Shop manager got the UI/UX, after some minor adjustments he was satisfied and wanted us to code up the solution. We used HTML/CSS to create the initial structure of all the web pages on the Figma design and then converted them to react components. Since we need persistent data for this solution we needed a Database since there is a lot of relational data and we don't need a lot of scale we used MySQL and defined a schema for the 3 tables we needed, After we did that we added a backend server that uses a REST API to communicate with the front end. The backend would perform Simple CRUD operations on the different tables of the database.</p>
+									<p><b>Technical Solution V2.0:</b> After we created that solution we wanted to make it more sustainable as every semester they would have hundreds of new teams, and thousands of new students. We can't really add thousands of records manually as that would take a lot of time so I added this feature where it would take the excel file the Fabrication Shop Manager would get every semester, detailing teams, and the people in them and would populate the Database automatically with hundreds of new teams. I also added other features to support this change</p>
+									<p><b>Technical Solution V3.0:</b> After we created that solution we wanted to make it more secure. The application only had 2 types of users admin's(managers), and employees of the tool crib. Admin's had full access to the app's features, and we restricted the access of employees to only checkout/checkin tools, and the home page. We also added a feature for admin's to add and delete employees and made changes on the backend and DB to facilitate this change. This makes the application more secure as any employee couldn't just delete all the records in the db and break the app and protects against malicious users.</p>
+									<p><b>Technical Solution Final Release:</b> Unfortunately this was all the progress me and the team could make in 13 weeks and we cycled off the solution for the next team to host it on the cloud and make it moble/tablet friendly as they would have multiple employees checking out tools at the same time.</p>
+									<p><b>Conclusion:</b> This was the project that changed me from a Computer Science student to a Software Engineer and holds a special place in my heart as prior this I've never touched anything but Java programming in highschool but I had to learn many new technologies on the job and work together as a team, and lead the team to solve a challenging and hard problem at the time.</p>
 								</div>
 							</section>
 

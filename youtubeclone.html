@@ -29,14 +29,16 @@
 					<nav id="menu">
 						<ul class="links">
 							<li><a href="index.html">Home</a></li>
-							<li><a href="landing.html">Landing</a></li>
-							<li><a href="generic.html">Generic</a></li>
-							<li><a href="elements.html">Elements</a></li>
+							<li><a href="projects.html">Projects</a></li>
+							<li><a href="workexperience.html">Work Experience</a></li>
+							<li><a href="skills.html">Skills</a></li>
+							<li><a href="extracurriculars.html">Extracurriculars</a></li>
+							<li><a href="academics.html">Academics</a></li>
 						</ul>
-						<ul class="actions stacked">
+						<!-- <ul class="actions stacked">
 							<li><a href="#" class="button primary fit">Get Started</a></li>
 							<li><a href="#" class="button fit">Log In</a></li>
-						</ul>
+						</ul> -->
 					</nav>
 
 				<!-- Main -->
@@ -46,12 +48,20 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Generic</h1>
+										<h1>YouTube Clone</h1>
 									</header>
-									<span class="image main"><img src="images/pic11.jpg" alt="" /></span>
-									<p>Donec eget ex magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fergiat. Pellentesque in mi eu massa lacinia malesuada et a elit. Donec urna ex, lacinia in purus ac, pretium pulvinar mauris. Curabitur sapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit.</p>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-									<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+									<span class="image main"><img src="images/youtubeArchitecture.avif" alt="" /></span>
+									<p>I've created a YouTube Clone which has the following functionality List videos, Watch videos, Sign in/out, Upload a video, and Watching the transcoded video deployed on GCP <a href="https://yt-web-client-ow7k2y32uq-uc.a.run.app" target="_blank">here</a>.</p>
+									<p>This clone uses 11 main technologies in it's tech stack: TypeScript, Next.js, Express.js, Docker, FFmpeg, Firebase Auth, Firebase Functions, Firebase Firestore, Google Cloud Storage, Google Cloud Pub/Sub, and Google Cloud Run.</p>
+									<h5>Architecture</h5>
+									<p>1. Cloud Storage will store the raw and processed videos uploaded by users. </br>
+										2. Pub/Sub will send messages to the video processing service.</br>
+										3. Cloud Run will host a non-public video processing service. After it transcodes videos, they will be uploaded to Cloud Storage. </br>
+										4. Cloud Firestore will store the metadata for the videos.</br>
+										5. Cloud Run will host a Next.js app, which will serve as the Youtube web client.</br>
+										6. The Next.js app will make API calls to Firebase Functions.</br>
+										7. Firebase Functions will fetch videos from Cloud Firestore and return them.
+									</p>
 								</div>
 							</section>
 
